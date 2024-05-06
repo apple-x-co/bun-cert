@@ -12,3 +12,14 @@ Expiration: 2025/3/2 8:59:59
 
 DNS:www.example.org, DNS:example.net, DNS:example.edu, DNS:example.com, DNS:example.org, DNS:www.example.com, DNS:www.example.edu, DNS:www.example.net
 ```
+
+## Compile
+
+```text
+$ bun --version
+1.1.7
+```
+
+```bash
+bun run compile
+```

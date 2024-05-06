@@ -175,5 +175,5 @@ dist
 .DS_Store
 
 # bun-cert's Binary file
-./bin/*
-!./bin/.gitkeep
+/bin/*
+!/bin/.gitkeep

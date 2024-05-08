@@ -10,9 +10,11 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "compile:darwin-arm64": "bun build index.js --compile --target=bun-darwin-arm64 --outfile bin/bun-cert-darwin-arm64",
-    "compile:linux-x64": "bun build index.js --compile --target=bun-linux-x64 --outfile bin/bun-cert-linux-x64",
-    "compile": "npm-run-all --serial compile:darwin-arm64 compile:linux-x64",
+    "compile:darwin-arm64": "bun build index.js --compile --minify --sourcemap --target=bun-darwin-arm64 --outfile bin/bun-cert-darwin-arm64",
+    "compile:linux-x64": "bun build index.js --compile --minify --sourcemap --target=bun-linux-x64 --outfile bin/bun-cert-linux-x64",
+    "compile:linux-x64-baseline": "bun build index.js --compile --minify --sourcemap --target=bun-linux-x64-baseline --outfile bin/bun-cert-linux-x64-baseline",
+    "compile:linux-x64-modern": "bun build index.js --compile --minify --sourcemap --target=bun-linux-x64-modern --outfile bin/bun-cert-linux-x64-modern",
+    "compile": "npm-run-all --serial compile:darwin-arm64 compile:linux-x64 compile:linux-x64-baseline compile:linux-x64-modern",
     "run": "bun run index.js --hostname example.com"
   }
 }
